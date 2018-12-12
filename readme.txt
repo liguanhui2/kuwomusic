@@ -5,7 +5,7 @@
 歌手移上时遮罩层效果
 
 酷我注册页面
-页面实现（自己动手编写html、css）
+页面实现（自己动手编写html、css）123
 表单验证效果
 http://www.kuwo.cn/www/user/register
 
