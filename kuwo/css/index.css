@@ -1,0 +1,423 @@
+/**轮播**/
+#banner {
+	height: 750px;
+	position: relative;
+	overflow: hidden;
+}
+
+#banner .tabLeft,
+#banner .tabRight {
+	display: none;
+	position: absolute;
+	top: 200px;
+	width: 80px;
+	height: 220px;
+	cursor: pointer;
+	background: url(../img/leftright.png);
+	z-index: 1000;
+}
+
+#banner #tabLeft {
+	left: 0;
+}
+
+#banner #tabRight {
+	right: 0;
+}
+
+#banner .tabLeft:hover span {
+	background: url(../img/left80.png);
+}
+
+#banner .tabRight:hover span {
+	background: url(../img/right80.png);
+}
+
+#banner ul {
+	position: absolute;
+	left: 0;
+	width: 999999em;
+}
+
+#banner ul li {
+	float: left;
+	position: relative;
+	cursor: pointer
+}
+
+#banner ul li img {
+	position: relative;
+	left: 0;
+	width: 1600px;
+	height: 750px
+}
+
+#banner ul li .splice {
+	width: 100%;
+	height: 100%;
+	background: #000;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+#banner #point{
+	position: absolute;
+	width: 100%;
+	top: 680px;
+	display: none;
+}
+
+/**内容**/
+#content {
+	padding-bottom: 20px;
+}
+
+#conBanner {
+	height: 400px;
+	background: #f2f2f2
+}
+
+#conBanner .conBanner {
+	width: 1200px;
+	margin: 0 auto;
+	overflow: hidden
+}
+
+#conBanner .conBanner .conBox {
+	width: 1241px;
+}
+
+#conBanner .conBanner .conBox img {
+	float: left;
+	margin: 40px 41px 0 0;
+	display: inline;
+}
+
+.title_ {
+	height: 60px;
+	line-height: 60px;
+}
+
+.title_ h2 {
+	float: left;
+	color: #333333;
+	font-size: 20px;
+}
+
+.title_ a {
+	float: right;
+	color: #999999;
+}
+
+.list {
+	width: 1200px;
+	margin: 0 auto;
+	overflow: hidden
+}
+
+.list ul {
+	float: left;
+	width: 1225px;
+}
+
+.list ul li {
+	float: left;
+	width: 220px;
+	position: relative;
+	margin-right: 25px
+}
+
+.list ul li img {
+	display: block
+}
+
+
+/*歌单*/
+#song ul {
+	margin-top: -10px;
+}
+
+#song ul li {
+	margin-top: 10px;
+	display: inline;
+}
+
+#song ul li .cover {
+	float: left;
+	position: relative;
+}
+
+#song .listen {
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	height: 60px;
+	background: url(../img/splice.png) repeat-x;
+	color: #fff;
+}
+
+#song .listen em {
+	float: left;
+	background: url(../img/icon.png) no-repeat -230px -44px;
+	padding-left: 20px;
+	margin: 30px 0 0 10px;
+	display: inline;
+	-moz-text-shadow: 1px 1px 0px #000;
+	-webkit-text-shadow: 1px 1px 0px #000;
+	text-shadow: 1px 1px 0px #000;
+	font-style: normal;
+}
+
+.songs a {
+	height: 22px;
+	line-height: 22px;
+	padding-left: 33px;
+	font-size: 18px;
+	display: inline-block;
+	background: url(../img/icon.png) no-repeat -307px -147px;
+	margin: 30px 16px 0 0;
+}
+
+.songs a:hover {
+	background-position: -307px -170px;
+	color: #f0bc0f;
+}
+
+.songs .more {
+	background: none;
+	padding: 0;
+}
+
+#song .name {
+	line-height: 52px;
+	font-size: 16px;
+}
+
+#song .name a {
+	color: #333333;
+}
+
+#song .play_pl {
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	background: url(../img/icon.png) -242px -163px;
+	top: 179px;
+	right: 11px;
+	cursor: pointer;
+	display: none
+}
+
+.bannerCon .albumDown {
+	margin-top: 30px;
+}
+
+
+/*歌手*/
+#singer {
+	margin-bottom: 20px;
+	position: relative;
+}
+
+#apolo {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 220px;
+	height: 360px;
+}
+
+#singer,
+#singer ul {
+	margin-top: -20px;
+}
+
+#singer ul li {
+	margin-top: 20px;
+	display: inline;
+}
+
+#singer ul li img {
+	height: 360px;
+}
+
+#singer .infoSplice {
+	background: #000;
+	width: 100%;
+	height: 85px;
+	position: absolute;
+	bottom: 0;
+}
+
+#singer .info {
+	width: 100%;
+	height: 85px;
+	position: absolute;
+	bottom: 0;
+	color: #fff;
+}
+
+#singer .info span {
+	display: block;
+	margin-left: 15px;
+	font-size: 12px;
+}
+
+#singer .name {
+	font-size: 16px;
+	margin: 13px 0 5px 0;
+}
+
+#singer .num span {
+	float: left;
+	margin-top: 5px;
+	display: inline;
+	background: url(../img/icon.png) no-repeat;
+	padding-left: 20px;
+}
+
+#singer .num .share {
+	background-position: -105px 3px
+}
+
+#singer .num .like {
+	background-position: -230px 4px
+}
+
+#singer .songListSplice {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	background: #000;
+	display: none;
+}
+
+#singer .songList {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	display: none;
+}
+
+#singer .songList h2 {
+	float: left;
+	font-size: 16px;
+	color: #fff;
+	font-weight: 500;
+	margin: 15px 0 0 15px;
+	display: inline;
+}
+
+#singer .songList .more {
+	float: right;
+	font-weight: 500;
+	margin: 19px 12px 0 0;
+	display: inline;
+}
+
+#singer .songList ul {
+	overflow: hidden;
+	width: 100%;
+	margin-top: 7px;
+}
+
+#singer .songList ul li {
+	margin-top: 11px;
+	color: #fff;
+	padding-left: 15px;
+	width: 205px
+}
+
+#singer .songList ul li span {
+	float: left
+}
+
+#singer .songList ul li a {
+	float: left;
+	width: 180px;
+	display: block;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis
+}
+
+#singer .songList a.playAllSong {
+	float: left;
+	width: 184px;
+	height: 36px;
+	background: url(../img/playAllBg.png);
+	font-size: 14px;
+	line-height: 36px;
+	text-align: center;
+	margin: 18px 0 0 18px;
+	display: inline;
+}
+
+#singer ul li.artistGroup {
+	width: 465px
+}
+
+#singer .artistGroup .songList .groupTitle {
+	width: 100%;
+	overflow: hidden
+}
+
+#singer .artistGroup .songList ul {
+	float: left;
+	width: 49%;
+}
+
+#singer .artistGroup .songList a.playAllSong {
+	margin-left: 140px
+}
+
+#singer .artistGroup .songList ul li a {
+	width: 195px;
+}
+
+
+.opacity30 {
+	filter:alpha(opacity=30);      
+	-moz-opacity:0.3; 
+	-khtml-opacity:0.3; 
+	opacity: 0.3; 
+}
+.opacity40 {
+	filter:alpha(opacity=40);      
+	-moz-opacity:0.4; 
+	-khtml-opacity:0.4; 
+	opacity: 0.4; 
+}
+.opacity50 {
+	filter:alpha(opacity=50);      
+	-moz-opacity:0.5; 
+	-khtml-opacity:0.5; 
+	opacity: 0.5; 
+}
+.opacity70 {
+	filter:alpha(opacity=70);      
+	-moz-opacity:0.7; 
+	-khtml-opacity:0.7; 
+	opacity: 0.7; 
+}
+.opacity80 {
+	filter:alpha(opacity=80);      
+	-moz-opacity:0.8; 
+	-khtml-opacity:0.8; 
+	opacity: 0.8; 
+}
+.opacity90 {
+	filter:alpha(opacity=90);      
+	-moz-opacity:0.9; 
+	-khtml-opacity:0.9; 
+	opacity: 0.9; 
+}
+.opacity95 {
+	filter:alpha(opacity=95);      
+	-moz-opacity:0.95; 
+	-khtml-opacity:0.95; 
+	opacity: 0.95; 
+}

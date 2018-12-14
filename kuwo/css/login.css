@@ -1,0 +1,272 @@
+/*登录*/
+.login {
+	width: 590px;
+	display: none
+}
+
+input.intInput:-webkit-autofill {
+	-webkit-box-shadow: 0 0 0px 1000px #fff inset;
+	border: 1px solid #dddddd;
+	height: 28px!important;
+	line-height: 28px!important;
+	width: 230px!important;
+	border-radius: 3px;
+}
+
+.radius {
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	border: 1px solid #dddddd;
+	padding: 0 9px;
+	background: none;
+	margin-left: 5px;
+}
+
+.radius20 {
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	border-radius: 20px;
+}
+
+.intInput {
+	float: left;
+	width: 230px;
+	height: 28px;
+	line-height: 28px;
+}
+
+.boxShadow {
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	-webkit-box-shadow: 0px 6px 9px rgba(34, 31, 26, .27);
+	-moz-box-shadow: 0px 6px 9px rgba(34, 31, 26, .27);
+	box-shadow: 0px 6px 9px rgba(34, 31, 26, .27);
+}
+
+.ugcBox {
+	width: 578px;
+	background: #fafafa;
+	padding-bottom: 40px;
+	overflow: hidden;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-left: -289px;
+	z-index: 3;
+}
+
+.ugcBox .isFocus {
+	border-color: #a8d3fc;
+}
+
+.topBox {
+	margin: 0 0 28px 20px;
+	width: 539px;
+	height: 56px;
+	line-height: 56px;
+	border-bottom: 1px solid #eeeeee
+}
+
+.topBox h1 {
+	float: left;
+	font-size: 14px;
+	font-weight: 400
+}
+
+.close,
+.closeIframe,
+.closeWindow {
+	float: right;
+	width: 12px;
+	height: 12px;
+	margin-top: 20px;
+	background: url(../img/close.png);
+}
+
+.close:hover,
+.closeIframe:hover,
+.closeWindow:hover {
+	background: url(../img/closeHover.png);
+}
+
+.line {
+	margin: 0 0 10px 19px;
+	float: left;
+	width: 100%;
+	color: #333333;
+}
+
+.line .lable {
+	float: left;
+	width: 97px;
+	line-height: 28px;
+	text-align: right;
+}
+
+.sureUp {
+	float: left;
+	width: 260px;
+	height: 40px;
+	line-height: 40px;
+	background: #f0aa00;
+	color: #fff;
+	font-size: 16px;
+	text-align: center;
+	margin: 8px 0 0 160px;
+	cursor: pointer;
+	outline: none;
+}
+
+.login input.intInput:-webkit-autofill {
+	-webkit-box-shadow: 0 0 0px 1000px #fff inset;
+	border: 1px solid #dddddd;
+	height: 38px!important;
+	line-height: 38px!important;
+	width: 240px!important;
+	border-radius: 3px;
+}
+
+.login .topBox {
+	width: 550px;
+	margin-bottom: 20px;
+}
+
+.login .left {
+	float: left;
+	width: 300px;
+	border-right: 1px solid #ddd;
+	margin-left: 20px;
+	display: inline;
+}
+
+.login .lable {
+	float: left;
+	margin: 0 0 20px 17px;
+	font-size: 14px;
+	color: #333;
+}
+
+.login .left input {
+	margin: 0 0 15px 10px;
+	height: 38px;
+	line-height: 38px;
+	font-size: 16px;
+	background: #fff;
+}
+
+.login .left input.verifyCode {
+	width: 95px;
+	float: left;
+	margin-right: 17px;
+}
+
+.login .left .verifyImg {
+	float: left;
+}
+
+.leftLine {
+	float: left;
+	width: 260px;
+	margin-left: 10px;
+	color: #666666;
+	font-size: 14px;
+}
+
+.leftLine a {
+	float: right;
+	color: #666666;
+}
+
+.checkBoxLogin {
+	float: left;
+	cursor: pointer;
+	width: 16px;
+	height: 16px;
+	background: url(../img/checkBoxBg.jpg);
+	margin: 3px 10px 0 0;
+}
+
+.checkBoxLogin.checked {
+	float: left;
+	width: 16px;
+	height: 16px;
+	background: url(../img/checkedBoxBg.jpg);
+}
+
+.autoLogin {
+	float: left;
+}
+
+.left .sureUp {
+	margin: 10px 0 10px 10px;
+}
+
+.login .right {
+	float: left;
+	width: 230px;
+}
+
+.login .right .lable {
+	margin-left: 37px;
+}
+
+.login .right a {
+	float: left;
+	width: 200px;
+	height: 40px;
+	background: #fff;
+	border: 1px solid #ddd;
+	line-height: 40px;
+	text-align: center;
+	color: #333;
+	font-size: 16px;
+	margin: 0 0 20px 30px;
+}
+
+.login .right span {
+	float: left;
+	cursor: pointer;
+}
+
+.login .right i {
+	float: left;
+	width: 18px;
+	height: 15px;
+}
+
+.login .wbLogin i {
+	background: url(../img/wbIcon.jpg);
+	margin: 12px 10px 0 37px;
+}
+
+.login .qqLogin i {
+	background: url(../img/qqIcon.jpg) no-repeat;
+	margin: 13px 10px 0 58px;
+}
+
+.login .noNum {
+	float: left;
+	text-indent: 129px;
+}
+
+.login .noNum a {
+	color: #f0aa00;
+}
+
+
+.login .zc_bot {
+	float: left;
+	margin: 0 0 0 13px;
+	line-height: 41px;
+}
+
+.login .left .command {
+	float: left;
+	margin: 2px 10px 0 0
+}
+
+.login .zc_bot a {
+	color: #46b4e6
+}
