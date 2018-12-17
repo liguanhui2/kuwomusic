@@ -1,0 +1,271 @@
+#commentArea {
+    font-size: 14px;
+    line-height: 120%;
+    color: rgb(51, 51, 51);
+    font-family: 微软雅黑;
+    padding: 40px 10px;
+}
+
+#commentArea .msg {
+	text-align: left;
+	height: 164px;
+	position: relative;
+	margin-bottom: 20px;
+}
+
+#commentArea.z1_commentArea {
+	padding-top: 0;
+	padding-bottom: 40px;
+}
+
+#commentArea p.title_ {
+	text-align: left;
+	font-size: 16px;
+	margin-bottom: 18px;
+	padding: 30px 0 20px 19px;
+	border-bottom: 1px solid #e4e4e4;
+}
+
+#commentArea p.title_ span,
+#commentArea h4 span {
+	color: #666;
+	font-size: 12px;
+	margin-left: 10px;
+}
+
+.commentCover {
+	float: left;
+	width: 60px;
+	height: 60px;
+	margin-right: 18px;
+}
+
+#commentArea .textBox {
+	border: 1px solid #ebebf0;
+	overflow: hidden;
+	height: 88px;
+	padding: 15px;
+	position: relative;
+}
+
+#commentArea .msgCon {
+	width: 100%;
+	height: 88px;
+	resize: none;
+	border: 0px;
+	outline: none;
+	overflow: auto;
+}
+
+#commentArea .textBox .msgTips {
+	position: absolute;
+	left: 15px;
+	top: 15px;
+	color: #cacaca;
+	display: block;
+	cursor: text;
+}
+
+#commentArea span.emotion {
+	width: 20px;
+	height: 20px;
+	background: url(../img/commenticon.png) no-repeat;
+	cursor: pointer;
+	position: absolute;
+	left: 78px;
+	bottom: 10px;
+	*left: 0;
+}
+
+#commentArea .word {
+	color: #666;
+	font-size: 12px;
+	line-height: 25px;
+	float: right;
+	margin-right: 10px;
+	position: absolute;
+	right: 85px;
+	bottom: 3px;
+}
+
+#commentArea .msgBtn {
+	width: 80px;
+	height: 32px;
+	text-align: center;
+	line-height: 32px;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	border-radius: 3px;
+	color: #fff;
+	background: #f0bc0f;
+}
+
+
+/**精彩评论**/
+#commentArea h4 {
+	padding: 30px 0 20px 19px;
+	font-size: 16px;
+	font-weight: normal;
+	border-bottom: 1px solid #e4e4e4;
+}
+
+#commentArea .box {
+	border-bottom: 1px dashed #ebebf0;
+	width: 100%;
+	padding: 21px 0 3px 0;
+}
+
+#commentArea .picBox {
+	float: left;
+	margin-right: 10px;
+	width: 60px;
+	height: 60px;
+	overflow: hidden
+}
+
+#commentArea #list img,
+#commentArea #rec_list img {
+	display: inline !important;
+}
+
+.contentComment img {
+	width: 19px;
+	position: relative;
+	top: 4px;
+	margin-left: 3px;
+}
+
+#commentArea #rec_list,
+#commentArea #list {
+	margin: 0 auto;
+	text-align: left;
+	width: 100%;
+}
+
+#commentArea .head {
+	width: 60px;
+	height: 60px;
+}
+
+#commentArea .contentComment {
+	padding-left: 78px;
+}
+
+#commentArea .main {
+	margin-bottom: 15px;
+	position: relative;
+}
+
+#commentArea .replyBox {
+	line-height: 22px;
+	word-wrap: break-word;
+	position: relative;
+}
+
+#commentArea .user {
+	color: #585890;
+	display: block;
+	margin-bottom: 5px;
+}
+
+#commentArea .user a {
+	color: #cd9800;
+}
+
+.commentReport {
+	position: absolute;
+	right: 35px;
+	top: 0;
+	color: #666666;
+	font-size: 12px;
+	display: none;
+	cursor: pointer;
+}
+
+#commentArea .commentShare {
+	float: right;
+	cursor: pointer;
+}
+
+#commentArea .commentShareBox {
+	font-style: normal;
+	position: absolute;
+	top: 0;
+	right: 0;
+	color: #666666;
+	font-size: 12px
+}
+
+#commentArea .commentBox {
+	padding: 10px;
+	background: #f2f2f6;
+	margin-bottom: 16px;
+	line-height: 22px;
+	word-break: break-all;
+}
+
+#commentArea .userComment {
+	display: inline;
+	color: #585890
+}
+
+#commentArea .userComment a {
+	color: #cd9800
+}
+
+#commentArea .time {
+	font-style: normal;
+	color: #666666;
+	font-size: 12px;
+}
+
+#commentArea .info_ .praise {
+	height: 16px;
+	line-height: 16px;
+	padding: 2px 21px 0 0;
+	background: url("../img/bg2.jpg") no-repeat right 0;
+	margin-right: 0;
+}
+#commentArea .info_ a {
+	float: right;
+	color: #666;
+	margin-right: 10px;
+}
+
+#commentArea .info_ .reply {
+	margin: 0 0 0 17px;
+}
+
+/**底序**/
+.pageComment {
+	float: left;
+	width: 100%;
+	height: 31px;
+	text-align: center;
+	padding-top: 30px;
+}
+
+.pageComment a {
+	display: inline-block;
+	font-size: 12px;
+	color: #333;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	margin-right: 5px;
+	background: url(../img/page.jpg);
+}
+
+.pageComment .current {
+	background: url(../img/current.jpg);
+	color: #fff;
+}
+
+.pageComment .point {
+	display: inline-block;
+	margin: 0 19px 0 14px;
+	height: 26px;
+	line-height: 26px;
+	color: #999999;
+}

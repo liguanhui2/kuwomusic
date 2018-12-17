@@ -1,0 +1,651 @@
+p,a {
+	color: #333;
+}
+
+.comW {
+	width: 1200px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.fl {
+	float: left;
+}
+
+.fr {
+	float: right;
+}
+
+.ellipsis {
+	display: block;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+#chartsContent {
+	overflow: hidden;
+	padding: 20px 0;
+}
+
+/**左侧**/
+.leftNav {
+	float: left;
+	position: relative;
+	width: 178px;
+	text-align: center;
+	border: 1px solid #e7e7e7;
+}
+
+.leftNav h2 {
+	width: 160px;
+	color: #333;
+	font-size: 16px;
+	margin: 17px 0 8px 10px;
+	text-align: left;
+	background: url(../img/up.png) no-repeat 122px 9px;
+	cursor: pointer;
+}
+
+.leftNav .down {
+	background: url(../img/down.png) no-repeat 122px 9px;
+}
+
+.leftNav .bang {
+	float: left;
+	width: 160px;
+	border-bottom: 1px solid #e7e7e7;
+	margin-left: 9px;
+}
+
+.leftNav .bang ul {
+	float: left;
+	padding-bottom: 19px;
+	display: none;
+}
+
+.leftNav .bang ul li {
+	float: left;
+	margin-top: 10px;
+}
+
+.leftNav .bang ul li span {
+	float: left;
+	margin: 15px 0 0 -10px;
+	width: 4px;
+	height: 20px;
+	background: #f0bc0f;
+	visibility: hidden;
+}
+
+.leftNav .bang ul li a {
+	float: left;
+	display: block;
+	margin-left: 10px;
+}
+
+.leftNav .bang ul li .name {
+	font-size: 12px;
+	font-weight: 500;
+	margin: 13px 0 0 15px;
+}
+
+.leftNav .bang ul li .clicked {
+	font-weight: 600;
+}
+
+.leftNav .bang img {
+	width: 50px;
+	height: 50px;
+	background: url(../img/50-50.jpg);
+}
+
+.leftNav .ewma {
+	float: left;
+	padding-bottom: 57px;
+}
+
+.leftNav .ewma img {
+	margin-bottom: 16px;
+}
+
+.leftNav .ewma h2 {
+	margin-left: 9px;
+	background: 0;
+	cursor: default;
+}
+
+.leftNav span {
+	display: block;
+	color: #666;
+}
+
+
+/**右侧**/
+fieldset, img {
+	border: 0;
+}
+
+.rightContentBox {
+	float: left;
+	width: 960px;
+	margin-left: 30px;
+	font-size: 14px;
+	line-height: 40px;
+	overflow: hidden;
+}
+
+.rightContentBox .banner {
+	width: 960px;
+	height: 140px;
+}
+
+.rightContentBox #songControll {
+	margin: 20px 0 20px 0;
+	overflow: hidden;
+}
+
+.rightContentBox #songControll a {
+	float: left;
+	background: url(../img/artisticon.png) no-repeat;
+	height: 32px;
+	display: block;
+	text-indent: -9999em;
+}
+
+:link, :visited{
+	text-decoration: none;
+}
+
+.rightContentBox #songControll p {
+	float: right;
+	color: #999;
+}
+
+.rightContentBox #songControll .loadAll {
+	width: 113px;
+	background-position: -228px -207px;
+	margin-right: 10px;
+}
+
+.rightContentBox #songControll .playAll {
+	width: 100px;
+	background-position: -241px -242px;
+}
+
+.rightContentBox #songControll .addAll {
+	width: 80px;
+	background-position: -261px -174px;
+	margin-left: 10px;
+}
+
+.rightContentBox #songControll .goComment {
+	padding: 0 12px;
+	height: 30px;
+	line-height: 30px;
+	text-indent: 0;
+	background: 0;
+	color: #999;
+	border: 1px solid #ddd;
+	margin-left: 10px;
+}
+
+.rightContentBox .chooseAll {
+	height: 40px;
+	background: #f2f2f6;
+	padding: 0 20px;
+	line-height: 40px;
+	color: #999;
+	font-size: 12px;
+}
+
+.rightContentBox .chooseAll dl dd {
+	float: left;
+}
+
+.rightContentBox ul li {
+	padding: 0 18px;
+	color: #666;
+	height: 40px;
+}
+
+.rightContentBox ul li a {
+	color: #666;
+}
+
+.rightContentBox .name {
+	float: left;
+	width: 311px;
+	display: block;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	margin-right: 90px;
+}
+
+.rightContentBox .artist {
+	float: left;
+	width: 120px;
+	display: block;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	margin-right: 100px;
+}
+
+.rightContentBox .heat {
+	float: left;
+	width: 70px;
+	height: 6px;
+	margin: 17px 0 0 0;
+	background: url(../img/heatBg.jpg) repeat-x;
+}
+
+.rightContentBox .heat .heatValue {
+	width: 73.5%;
+	height: 6px;
+	background: url(../img/heatValueBg.jpg) repeat-x;
+}
+
+.rightContentBox dd.heat {
+	background: 0;
+	height: 40px;
+	line-height: 40px;
+	margin-top: 0;
+}
+
+.rightContentBox dd.heat .heatValue {
+	background: 0;
+}
+
+.rightContentBox dd.trend {
+	width: 45px;
+	padding-left: 34px;
+}
+
+.rightContentBox dl dd.listRight {
+	float: right;
+	width: 79px;
+	text-align: left;
+	text-indent: 4px;
+}
+
+.rightContentBox .leftInfo {
+	float: left;
+}
+
+.rightContentBox .leftInfo .num {
+	float: left;
+	width: 34px;
+	font-size: 14px;
+	color: #666;
+}
+
+.rightContentBox .leftInfo .mTrend {
+	float: left;
+	width: 45px;
+}
+
+.rightContentBox .leftInfo .mTrend span,
+.rightContentBox .leftInfo .mTrend p {
+	float: left;
+}
+
+.rightContentBox .leftInfo .mTrend .e0 {
+	width: 10px;
+	height: 2px;
+	margin: 19px 4px 0 0;
+	background: url(../img/icon.png) no-repeat -57px 0;
+}
+
+.rightContentBox .leftInfo .mTrend .u0 {
+	width: 10px;
+	height: 11px;
+	margin: 14px 4px 0 0;
+	background: url(../img/bangicon.png) no-repeat 0 0;
+}
+
+.rightContentBox .leftInfo .mTrend .d0 {
+	width: 10px;
+	height: 11px;
+	margin: 14px 4px 0 0;
+	background: url(../img/icon.png) no-repeat -42px 0;
+}
+
+.rightContentBox .leftInfo .mTrend .n0 {
+	width: 22px;
+	height: 7px;
+	margin: 17px 4px 0 0;
+	background: url(../img/icon.png) no-repeat -15px 0;
+}
+
+.rightContentBox .leftInfo .mTrend p {
+	font-size: 12px;
+	color: #999;
+}
+
+.rightContentBox .listRight {
+	float: right;
+	width: 117px;
+	text-align: center;
+	position: relative;
+}
+
+.rightContentBox .listRight .tools {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+}
+
+.rightContentBox .listRight .tools a {
+	float: left;
+	background: url(../img/icon.png);
+	display: block;
+}
+
+.rightContentBox .listRight .tools .play {
+	width: 8px;
+	height: 11px;
+	background: url(../img/artisticon.png) 0 -229px;
+	margin: 14px 14px 0 0;
+}
+
+.rightContentBox .listRight .tools .add {
+	width: 14px;
+	height: 14px;
+	background: url(../img/artisticon.png) -13px -228px;
+	margin: 13px 12px 0 0;
+}
+
+.rightContentBox .listRight .tools .down {
+	width: 13px;
+	height: 14px;
+	background-position: -51px 0;
+	margin: 13px 13px 0 0;
+}
+
+.rightContentBox .listRight .tools .share {
+	float: left;
+	width: 13px;
+	height: 13px;
+	background: url(../img/icon.png) -69px 0;
+	margin-top: 14px;
+	cursor: pointer;
+	position: relative;
+}
+
+
+
+/**评论**/
+#commentArea {
+	font-size: 14px;
+	line-height: 120%;
+	color: #333;
+	font-family: "微软雅黑";
+	padding: 40px 10px;
+}
+
+#commentArea .msg {
+	text-align: left;
+	height: 164px;
+	position: relative;
+	margin-bottom: 20px;
+}
+
+#commentArea.z1_commentArea {
+	padding-top: 0;
+	padding-bottom: 40px;
+}
+
+#commentArea p.title_ {
+	text-align: left;
+	font-size: 16px;
+	margin-bottom: 18px;
+	padding: 30px 0 20px 19px;
+	border-bottom: 1px solid #e4e4e4;
+}
+
+#commentArea p.title_ span,
+#commentArea h4 span {
+	color: #666;
+	font-size: 12px;
+	margin-left: 10px;
+}
+
+.commentCover {
+	float: left;
+	width: 60px;
+	height: 60px;
+	margin-right: 18px;
+}
+
+#commentArea .textBox {
+	border: 1px solid #ebebf0;
+	overflow: hidden;
+	height: 88px;
+	padding: 15px;
+	position: relative;
+}
+
+#commentArea .msgCon {
+	width: 100%;
+	height: 88px;
+	resize: none;
+	border: 0px;
+	outline: none;
+	overflow: auto;
+}
+
+#commentArea .textBox .msgTips {
+	position: absolute;
+	left: 15px;
+	top: 15px;
+	color: #cacaca;
+	display: block;
+	cursor: text;
+}
+
+#commentArea span.emotion {
+	width: 20px;
+	height: 20px;
+	background: url(../img/commenticon.png) no-repeat;
+	cursor: pointer;
+	position: absolute;
+	left: 78px;
+	bottom: 10px;
+	*left: 0;
+}
+
+#commentArea .word {
+	color: #666;
+	font-size: 12px;
+	line-height: 25px;
+	float: right;
+	margin-right: 10px;
+	position: absolute;
+	right: 85px;
+	bottom: 3px;
+}
+
+#commentArea .msgBtn {
+	width: 80px;
+	height: 32px;
+	text-align: center;
+	line-height: 32px;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	border-radius: 3px;
+	color: #fff;
+	background: #f0bc0f;
+}
+
+
+/**精彩评论**/
+#commentArea h4 {
+	padding: 30px 0 20px 19px;
+	font-size: 16px;
+	font-weight: normal;
+	border-bottom: 1px solid #e4e4e4;
+}
+
+#commentArea .box {
+	border-bottom: 1px dashed #ebebf0;
+	width: 100%;
+	padding: 21px 0 3px 0;
+}
+
+#commentArea .picBox {
+	float: left;
+	margin-right: 10px;
+	width: 60px;
+	height: 60px;
+	overflow: hidden
+}
+
+#commentArea #list img,
+#commentArea #rec_list img {
+	display: inline !important;
+}
+
+.contentComment img {
+	width: 19px;
+	position: relative;
+	top: 4px;
+	margin-left: 3px;
+}
+
+#commentArea #rec_list,
+#commentArea #list {
+	margin: 0 auto;
+	text-align: left;
+	width: 100%;
+}
+
+#commentArea .head {
+	width: 60px;
+	height: 60px;
+}
+
+#commentArea .contentComment {
+	padding-left: 78px;
+}
+
+#commentArea .main {
+	margin-bottom: 15px;
+	position: relative;
+}
+
+#commentArea .replyBox {
+	line-height: 22px;
+	word-wrap: break-word;
+	position: relative;
+}
+
+#commentArea .user {
+	color: #585890;
+	display: block;
+	margin-bottom: 5px;
+}
+
+#commentArea .user a {
+	color: #cd9800;
+}
+
+.commentReport {
+	position: absolute;
+	right: 35px;
+	top: 0;
+	color: #666666;
+	font-size: 12px;
+	display: none;
+	cursor: pointer;
+}
+
+#commentArea .commentShare {
+	float: right;
+	cursor: pointer;
+}
+
+#commentArea .commentShareBox {
+	font-style: normal;
+	position: absolute;
+	top: 0;
+	right: 0;
+	color: #666666;
+	font-size: 12px
+}
+
+#commentArea .commentBox {
+	padding: 10px;
+	background: #f2f2f6;
+	margin-bottom: 16px;
+	line-height: 22px;
+	word-break: break-all;
+}
+
+#commentArea .userComment {
+	display: inline;
+	color: #585890
+}
+
+#commentArea .userComment a {
+	color: #cd9800
+}
+
+#commentArea .time {
+	font-style: normal;
+	color: #666666;
+	font-size: 12px;
+}
+
+#commentArea .info_ .praise {
+	height: 16px;
+	line-height: 16px;
+	padding: 2px 21px 0 0;
+	background: url("../img/bg2.jpg") no-repeat right 0;
+	margin-right: 0;
+}
+#commentArea .info_ a {
+	float: right;
+	color: #666;
+	margin-right: 10px;
+}
+
+#commentArea .info_ .reply {
+	margin: 0 0 0 17px;
+}
+
+/**底序**/
+.pageComment {
+	float: left;
+	width: 100%;
+	height: 31px;
+	text-align: center;
+	padding-top: 30px;
+}
+
+.pageComment a {
+	display: inline-block;
+	font-size: 12px;
+	color: #333;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	margin-right: 5px;
+	background: url(../img/page.jpg);
+}
+
+.pageComment .current {
+	background: url(../img/current.jpg);
+	color: #fff;
+}
+
+.pageComment .point {
+	display: inline-block;
+	margin: 0 19px 0 14px;
+	height: 26px;
+	line-height: 26px;
+	color: #999999;
+}
