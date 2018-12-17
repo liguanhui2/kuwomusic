@@ -16,11 +16,11 @@
 	})
 
 	$(".loginBtn").click(function(){
-		$(".LoginBox").css("display","block");
+		$(".loginBox").css("display","block");
 	})
 
 	$(".closeWindow").click(function(){
-		$(".LoginBox").css("display","none");
+		$(".loginBox").css("display","none");
 	})
 
 	//播放器
@@ -69,7 +69,8 @@
     	$("#wp_playTime").html(m+":"+s);
 
     	var grow=(($("#mymusic")[0].currentTime)/($("#mymusic")[0].duration)*100);
-
+   
+         $("#wp_processBar").css("width",grow+"px");
     	$("#wp_processBtn").css("left",grow+"px");
 
     	

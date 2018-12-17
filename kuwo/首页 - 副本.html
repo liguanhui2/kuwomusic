@@ -226,9 +226,9 @@
 		<a class="tabRight" id="tabRight" style="display: none;">
 			<span></span>
 		</a>
-		<ul id="lunbo" style="width: 13000px;left: 0px;">
+		<ul id="lunbo" style="width: 9600px;left: 0;">
 			<li>
-				<img class="bannerItem"  id="img" src="img/1542089773929_.jpg">
+				<img class="bannerItem"  id="img" src="img/1542351105448_.jpg">
 				<a><div class="splice opacity50"></div></a>
 			</li>
 			<li>
@@ -247,27 +247,23 @@
 				<img class="bannerItem"  id="img" src="img/1542089773929_.jpg">
 				<a><div class="splice opacity50"></div></a>
 			</li>
-			<li>
-				<img class="bannerItem"  id="img" src="img/1542423362435_.jpg">
-				<a><div class="splice opacity50"></div></a>
-			</li>
-			
 	    </ul>
 		<div id="point" style="display: block;">
 		    <div class="point" style="width: 268px;">
-		        <div class="pointBox"id="pointBox" style="width: 288px;">
+		        <div class="pointBox" id="pointBox" style="width: 288px;">
 							
-					<a class="active" title="0"></a>
+					<a class="active" ></a>
 							
-					<a  class="" title="1"></a>
+					<a  class=""></a>
 							
-					<a  class="" title="2"></a>
+					<a  class=""></a>
 							
-					<a  class="" title="3"></a>
+					<a  class=""></a>
 							
-					<a  class="" title="4"></a>
+					<a  class=""></a>
 							
-					<a  class="" title="5"></a>
+					<a  class=""></a>
+
 							
 				</div>
 			</div>
@@ -996,47 +992,6 @@
 		$("#tabLeft").css("display","none");
 		$("#tabRight").css("display","none");
 	})
-
-	var index=0;
-
-	var intervalId=setInterval(function(){
-		index=index+1;
-		$("#lunbo").css("left",-index*1600+"px");
-		$("#lunbo").css("transition","all 2s");
-
-		if (index==6) {
-			index=0;
-			$("#lunbo").css("left","0px");
-		}
-
-	},4000);
-
-	$("#pointBox a").click(function(){
-		clearInterval(intervalId);
-		$(this).attr("class","active");
-		$(this).siblings().removeClass("active");
-		var title=$(this).attr("title");
-
-		$("#lunbo").css("left",-title*1600+"px");
-		$("#lunbo").css("transition","all 2s");
-		// index = title;
-	})
-
-	$("#tabLeft").click(function(){
-			
-			clearInterval(intervalId);
-			$("#lunbo").css("left","px");
-			
-
-
-		})
-
-		$("#tabRight").click(function(){
-			clearInterval(intervalId);
-			$("#lunbo").css("left",-index*800+"px");
-           
-
-		})
 
 
 

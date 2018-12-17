@@ -45,6 +45,8 @@ input.intInput:-webkit-autofill {
 	box-shadow: 0px 6px 9px rgba(34, 31, 26, .27);
 }
 
+
+
 .ugcBox {
 	width: 578px;
 	background: #fafafa;
@@ -104,6 +106,8 @@ input.intInput:-webkit-autofill {
 	line-height: 28px;
 	text-align: right;
 }
+
+
 
 .sureUp {
 	float: left;
