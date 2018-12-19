@@ -985,97 +985,79 @@
 <script type="text/javascript">
 
 	// 轮播图
+$("#banner").mouseover(function() {
+    $("#tabLeft").css("display", "block");
+    $("#tabRight").css("display", "block");
 
-	$("#banner").mouseover(function(){
-		$("#tabLeft").css("display","block");
-		$("#tabRight").css("display","block");
+})
 
-	})
+$("#banner").mouseout(function() {
+    $("#tabLeft").css("display", "none");
+    $("#tabRight").css("display", "none");
+})
 
-	$("#banner").mouseout(function(){
-		$("#tabLeft").css("display","none");
-		$("#tabRight").css("display","none");
-	})
+var index = 0;
 
-	var index=0;
+var intervalId = setInterval(function() {
+    index = index + 1;
+    $("#lunbo").css("left", -index * 1600 + "px");
+    $("#lunbo").css("transition", "all 2s");
 
-	var intervalId=setInterval(function(){
-		index=index+1;
-		$("#lunbo").css("left",-index*1600+"px");
-		$("#lunbo").css("transition","all 2s");
+    if (index == 6) {
+        index = 0;
+        $("#lunbo").css("left", "0px");
+    }
 
-		if (index==6) {
-			index=0;
-			$("#lunbo").css("left","0px");
-		}
+    if ($("#tabLeft").click()==true) {
+        index = index + 1;
 
-	},4000);
+        clearInterval(intervalId);
+        $("#lunbo").css("left", index * 1600 + "px");
 
-	$("#pointBox a").click(function(){
-		clearInterval(intervalId);
-		$(this).attr("class","active");
-		$(this).siblings().removeClass("active");
-		var title=$(this).attr("title");
+    }
 
-		$("#lunbo").css("left",-title*1600+"px");
-		$("#lunbo").css("transition","all 2s");
-		// index = title;
+    if ($("#tabRight").click()==true) {
+        index = index - 1;
+        clearInterval(intervalId);
+        $("#lunbo").css("left", -index * 1600 + "px");
 
-		
-	})
+    }
 
-	$("#tabLeft").click(function(){
-			
-			clearInterval(intervalId);
-			$("#lunbo").css("left","px");
-			
+},
+4000);
 
+$("#pointBox a").click(function() {
+    clearInterval(intervalId);
+    $(this).attr("class", "active");
+    $(this).siblings().removeClass("active");
+    var title = $(this).attr("title");
 
-		})
+    $("#lunbo").css("left", -title * 1600 + "px");
+    $("#lunbo").css("transition", "all 2s");
 
-		$("#tabRight").click(function(){
-			clearInterval(intervalId);
-			$("#lunbo").css("left",-index*800+"px");
-           
+})
 
-		})
+$(".cover").mouseover(function() {
+    $(this).children(".play_pl").css("display", "inline");
+})
 
+$(".cover").mouseout(function() {
+    $(this).children(".play_pl").css("display", "none");
+})
 
+$("#singer ul li").mouseover(function() {
+    $(this).children(".infoSplice opacity70").css("display", "none");
+    $(this).children(".info").css("display", "none");
+    $(this).children(".songListSplice").css("display", "block");
+    $(this).children(".songList").css("display", "block");
+})
 
-
-
-
-
-
-
-
-
-
-
-
-    $(".cover").mouseover(function(){
-    	$(this).children(".play_pl").css("display","inline");
-    })
-
-    $(".cover").mouseout(function(){
-    	$(this).children(".play_pl").css("display","none");
-    })
-
-    $("#singer ul li").mouseover(function(){
-    	$(this).children(".infoSplice opacity70").css("display","none");
-    	$(this).children(".info").css("display","none");
-    	$(this).children(".songListSplice").css("display","block");
-    	$(this).children(".songList").css("display","block");
-    })
-
-    $("#singer ul li").mouseout(function(){
-    	$(this).children(".infoSplice opacity70").css("display","block");
-    	$(this).children(".info").css("display","block");
-    	$(this).children(".songListSplice").css("display","none");
-    	$(this).children(".songList").css("display","none");
-    })
-
-
+$("#singer ul li").mouseout(function() {
+    $(this).children(".infoSplice opacity70").css("display", "block");
+    $(this).children(".info").css("display", "block");
+    $(this).children(".songListSplice").css("display", "none");
+    $(this).children(".songList").css("display", "none");
+})
 
 </script>
 </html>

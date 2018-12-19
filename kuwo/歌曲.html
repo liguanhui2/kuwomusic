@@ -238,6 +238,9 @@
 								<p id="lId33" class="lrcItem">慢羊羊 软绵绵 红太狼 灰太狼      </p>
     				    </div>
     				</div>
+    				<div id="bar_box">
+    					<div id="bar" style="top: 0px"></div>
+    				</div>
     			</div>
     			<div id="playerBox">
     				<div class="musiciPic">
@@ -260,7 +263,7 @@
                     	<div class="soundBox">
                     		<div id="soundPro">
                     			<div class="soundPro" id="wp_volBar"></div>
-                    			<a href="##" id="wp_volBtn"></a>
+                    			<a href="##" id="wp_volBtn" draggable="true"></a>
                     		</div>
                     	</div>
                     </div>
@@ -700,7 +703,7 @@
 </body>
 <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
 <script type="text/javascript">
-	//顶部及其登录框
+		//顶部及其登录框
 	$(".more").mouseover(function(){
 		$(".more ul").css("display","block");
 	})
@@ -725,6 +728,7 @@
 		$(".loginBox").css("display","none");
 	})
 
+    //右边音乐播放器
 	var flag=0;
 
 	$("#wp_playBtn").click(function(){
@@ -732,6 +736,30 @@
 			$(this).addClass("zan");
 			$("#mymusic")[0].play();
 			flag=1;
+
+			var x=-1;
+			var y=0;
+            
+            var musicInterval=setInterval(function(){
+    	        x=x+1;
+    	        $("#llrcId").children(".lrcItem").removeClass("lyric_now");
+    	        $("#llrcId").children("#lId"+x).addClass("lyric_now");
+    	        $("#llrcId").css("transition","0.3s linear 0s;"); 
+
+    	        if ($("#wp_playTime").val("00:37")==true) {
+    	        	
+       	        	y=y+1;
+       	            $("#llrcId").css("transform","translateY"+"("+y*-32+"px)");
+    	            $("#bar").css("top",y*19+"px");
+
+    	        	    if ($("#wp_playTime").val("00:00")==true) {
+    	        		   x=0;
+    	        		   y=-2;
+    	        		   clearInterval(musicInterval);
+    	        	}
+    	        }
+
+            },4700)			
 		}else{
 			$(this).removeClass("zan");
 			$("#mymusic")[0].pause();
@@ -762,6 +790,8 @@
     	
     },1000);
 
+    //音量
+
     $("#wp_mute").click(function(){
     	if (flag==0) {
     		$("#soundBox").addClass("isvisibility");
@@ -772,7 +802,12 @@
     	}
     })
 
-    
+    $("#wp_volBtn").drag(function(){
+    	alert(1);
+    })
+
+
+
 
 </script>
 </html>

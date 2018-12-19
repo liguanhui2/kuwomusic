@@ -89,16 +89,16 @@
 	</div>
 
     <!--登录框-->
-	<div class="LoginBox" style="display: none;">
+	<div class="loginBox" style="display: none;">
 		<div class="loginShadow" style="display: block;"></div>
 		<div class="ugcBox login boxShadow" style="margin-top: -200px;display: block;">
-			<div class="toBox">
+			<div class="topBox">
 				<h1>登录</h1>
 				<a href="##" class="closeWindow"></a>
 			</div>
 			<form id="loginForm" action="##" method="post">
 				<div class="left">
-					<span class="label">酷我账号登录</span>
+					<span class="lable">酷我账号登录</span>
 					<input placeholder="酷我账号" type="text" name="uname" class="number intInput radius">
 					<input placeholder="密码" type="password" name="password" class="pwd intInput radius">
 					<input placeholder="验证码" type="text" name="verifyCode" class="verifyCode intInput radius">
@@ -119,7 +119,7 @@
 				</div>
 			</form>
 			<div class="right">
-				<span class="label">第三方账号登录</span>
+				<span class="lable">第三方账号登录</span>
 				<a class="wbLogin radius20" href="##">
 					<i></i>
 					<span>新闻微博登录</span>
@@ -138,6 +138,9 @@
     <!-- 歌曲部分 -->
 
     <div id="musicCon">
+    	<audio autoplay id="mymusic">
+		    <source src="./img/2.mp3" type="audio/mp3">
+	    </audio>
     	<div class="music">
     		<div id="musiclrc">
     			<p id="lrcName">喜羊羊</p>
@@ -235,6 +238,9 @@
 								<p id="lId33" class="lrcItem">慢羊羊 软绵绵 红太狼 灰太狼      </p>
     				    </div>
     				</div>
+    				<div id="bar_box">
+    					<div id="bar" style="top: 0px"></div>
+    				</div>
     			</div>
     			<div id="playerBox">
     				<div class="musiciPic">
@@ -267,6 +273,21 @@
                     		<span>免费下载这首歌</span>
                     	</a>
                     </div>
+                    <div class="showAdBox">
+				        <img src="img/郭子仪.jpg" class="showHeadPic"/>
+				        <div class="showAd">
+					    <p>
+					    	<a href="##"class="showerName">郭子仪</a>
+					    	<span>——H5班</span>
+					    </p>
+					    <div class="showAdLine">
+						<img src="img/gif.gif" />
+						<span class="showSongName">喜羊羊与灰太狼</span>
+						<a href="##">去现场 ></a>
+					</div>
+				</div>
+			</div>
+
 
 
     			</div>
@@ -350,7 +371,7 @@
 											<a class="reply">回复</a>
 											<a class="praise" data-flag="false">149</a>
 											<span class="delLine"></span>
-											<a class="delete">删除</a>
+											<a class="delete"></a>
 											<p class="time">2017-06-03 16:58:02</p>
 										</div>
 									</div>
@@ -379,7 +400,7 @@
 											<a class="reply">回复</a>
 											<a class="praise" data-flag="false">106</a>
 											<span class="delLine"></span>
-											<a class="delete">删除</a>
+											<a class="delete"></a>
 											<p class="time">2017-05-14 16:16:53</p>
 										</div>
 									</div>
@@ -417,7 +438,7 @@
 											<a class="reply">回复</a>
 											<a class="praise" data-flag="false">17</a>
 											<span class="delLine"></span>
-											<a class="delete">删除</a>
+											<a class="delete"></a>
 											<p class="time">2017-02-18 09:47:10</p>
 										</div>
 									</div>
@@ -448,7 +469,7 @@
 										<div class="info_">
 											<a class="reply">回复</a>
 											<a class="praise" data-flag="false">1</a><span class="delLine"></span>
-											<a class="delete">删除</a>
+											<a class="delete"></a>
 											<p class="time">2018-11-18 09:00:31</p>
 										</div>
 									</div>
@@ -474,7 +495,7 @@
 										<div class="info_">
 											<a class="reply">回复</a>
 											<a class="praise" data-flag="false"></a><span class="delLine"></span>
-											<a class="delete">删除</a>
+											<a class="delete"></a>
 											<p class="time">2018-11-17 17:15:02</p>
 										</div>
 									</div>
@@ -500,7 +521,7 @@
 										<div class="info_">
 											<a class="reply">回复</a>
 											<a class="praise" data-flag="false"></a><span class="delLine"></span>
-											<a class="delete">删除</a>
+											<a class="delete"></a>
 											<p class="time">2018-11-16 15:22:25</p>
 										</div>
 									</div>
@@ -526,7 +547,7 @@
 										<div class="info_">
 											<a class="reply">回复</a>
 											<a class="praise" data-flag="false"></a><span class="delLine"></span>
-											<a class="delete">删除</a>
+											<a class="delete"></a>
 											<p class="time">2018-11-16 14:57:42</p>
 										</div>
 									</div>
@@ -700,12 +721,84 @@
 	})
 
 	$(".loginBtn").click(function(){
-		$(".LoginBox").css("display","block");
+		$(".loginBox").css("display","block");
 	})
 
 	$(".closeWindow").click(function(){
-		$(".LoginBox").css("display","none");
+		$(".loginBox").css("display","none");
 	})
+
+    //右边音乐播放器
+	var flag=0;
+
+	$("#wp_playBtn").click(function(){
+		if (flag==0) {
+			$(this).addClass("zan");
+			$("#mymusic")[0].play();
+			flag=1;
+
+			var x=0;
+			var y=0;
+            
+            var musicInterval=setInterval(function(){
+    	        x=x+1;
+    	        $("#llrcId").children(".lrcItem").removeClass("lyric_now");
+    	        $("#llrcId").children("#lId"+x).addClass("lyric_now");
+
+    	        if ($("#wp_playTime").html("2:07")==true) {
+    	        	y=y+1;
+    	        	$("#llrcId").css("transform","transform 0.3s linear 0s");
+    	        	$("#llrcId").css("transform","translateY"+"("+y*32+")");
+    	        }
+
+
+            },4500)
+
+
+			
+		}else{
+			$(this).removeClass("zan");
+			$("#mymusic")[0].pause();
+			flag=0;
+		}
+
+	})
+
+	setInterval(function(){
+    	var m=parseInt($("#mymusic")[0].currentTime/60);
+    	var s=parseInt($("#mymusic")[0].currentTime%60);
+
+    	if(m<10){
+    		m="0"+m;
+    	}
+
+    	if (s<10) {
+    		s="0"+s;
+    	}
+
+    	$("#wp_playTime").html(m+":"+s);
+
+    	var grow=(($("#mymusic")[0].currentTime)/($("#mymusic")[0].duration)*100);
+
+        $("#wp_processBar").css("width",grow+"px");
+    	$("#wp_processBtn").css("left",grow+"px");
+
+    	
+    },1000);
+
+    $("#wp_mute").click(function(){
+    	if (flag==0) {
+    		$("#soundBox").addClass("isvisibility");
+    		flag=1;
+    	}else{
+            $("#soundBox").removeClass("isvisibility");
+            flag=0;
+    	}
+    })
+
+    
+
+
 
     
 

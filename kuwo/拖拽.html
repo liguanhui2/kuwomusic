@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+	<!-- <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/scroll.css" /> -->
+    <title> 页面名称 </title>
+	
+</head>
+<style>
+*{margin:0}
+</style>
+<body>
+ 
+<div id="d1" name="wrap" style="width:300px;height:60px; border: 1px solid #000;" >
+    <div id="bg" style="float: left;width: 80px;height: 60px;background-color: #e4b54c;"></div>
+    <div id="drag" style="float: left;width: 20px;height: 60px;background-color: #78ba54;"onmouseover="this.style.cursor='pointer'"></div>
+	<p id="p1"style="clear:both;">水平坐标：</p>
+	<p id="p2">绿色盒子距离最左侧距离：</p>
+	<p id="p3">橙色盒子(背景)距离最左侧距离：</p>
+	<p id="p4">橙色盒子宽度：</p>
+	<p id="p5">绿色盒子宽度：</p>
+	<p id="p6">最大盒子宽度：</p>
+	<p id="p7">最大的盒子距离最左侧距离：</p>
+	<p id="p8">百分比：</p>
+</div>
+ <script type="text/javascript">
+ 
+	var oDiv1 = document.getElementById('d1');
+	var oDiv2 = document.getElementById('bg');
+	var oDiv3 = document.getElementById('drag');
+	
+	oDiv3.onmousedown = function(ev)
+	{
+		var oEvent = ev || event;
+		var downLg = oEvent.clientX - oDiv3.offsetLeft;
+		document.onmousemove = function(ev)
+		{
+			var oEvent = ev || event;
+			var moveLg = oEvent.clientX - downLg;
+			if(moveLg<0)
+			{
+				moveLg=0;
+			}
+			else if(moveLg>oDiv1.offsetWidth-oDiv3.offsetWidth-2)
+			{
+				moveLg=oDiv1.offsetWidth-oDiv3.offsetWidth-2;
+			}
+ 
+			oDiv2.style.width = moveLg + 'px';
+ 
+			var odiv2Widthpp = oDiv2.offsetLeft;
+			var odiv2Width = oDiv2.style.width;
+			var odiv3Width = oDiv3.offsetWidth;
+			var odiv3Widthpp = oDiv3.offsetLeft;
+			var x = oEvent.clientX;
+			var rate = parseInt(moveLg/2.78) + '%'; 
+			var d1Width = oDiv1.offsetWidth;
+			var d1Widthpp = oDiv1.offsetLeft;
+			$('#p1').html('水平坐标:'+x);
+			$('#p2').html('绿色盒子距离最左侧距离:'+odiv3Widthpp);
+			$('#p3').html('橙色盒子(背景)距离最左侧距离:'+odiv2Widthpp);
+			$('#p4').html('橙色盒子宽度:'+odiv2Width);
+			$('#p5').html('绿色盒子宽度:'+odiv3Width);
+			$('#p6').html('拉动最大的宽度（d1宽度）'+d1Width);
+			$('#p7').html('最大的盒子距离最左侧距离:'+d1Widthpp);
+			$('#p8').html('百分比:'+rate);
+			
+		}
+		 document.onmouseup = function()
+		{
+			document.onmousemove = null;
+			document.onmouseup = null;
+		}
+	}
+</script>
+ 
+</body>
+</html>

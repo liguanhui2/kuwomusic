@@ -100,6 +100,7 @@
 	float:left;width: 16px;
 	height: 16px;background:url(../img/icon.png) -105px -45px;
 	margin-right:20px;
+	cursor: pointer;
 }
 #banner #point .point .pointBox a.active {
 	background-position:-127px -45px;
@@ -274,6 +275,7 @@
 #singer ul li {
 	margin-top: 20px;
 	display: inline;
+	cursor: pointer;
 }
 
 #singer ul li img {

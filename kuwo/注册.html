@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html>
-
 	<head>
 		<meta charset="UTF-8">
-		<title>Document</title>
+		<title>注册页面</title>
 		<link rel="stylesheet" type="text/css" href="css/reset.css">
 		<link rel="stylesheet" type="text/css" href="css/foot.css" />	
 		<link rel="stylesheet" type="text/css" href="css/login.css" />	
-		<link rel="stylesheet" type="text/css" href="css/player.css" />	
 		<link rel="stylesheet" type="text/css" href="css/top.css" />	
 		<link rel="stylesheet" type="text/css" href="css/register.css" />	
 	</head>
@@ -84,46 +82,50 @@
 			<div id="register-content">
 				<div id="register-form">
 					<div>						
-						<div class="form-item">
+						<div class="form-item" style="display: block;" id="a">
 							<label>手　机　号</label>
 							<span class="placeholder">请使用常用手机注册</span>
-							<input type="text" name="regPhone" class="field">
+							<input type="text" name="regPhone" class="field" warning="请输入正确的格式">
 						</div>						
 						<div class="input-tip"></div>
+
+					<div>
+						<a class="change" href="##">邮箱注册</a>
+					</div>
+
 					</div>
 					
-					<a class="change">邮箱注册</a>
-					
-					<div class="form-item form-item-name">
+				
+					<div class="form-item">
 						<label>昵　　　称</label>
 						<span class="placeholder">2~16位中文、英文、数字等</span>
-						<input type="text" name="regName" class="field">
+						<input type="text" name="regName" class="field" warning="长度只能在2-16个字符之间，请重新输入">
 					</div>
 					<div class="input-tip"></div>
 					
 					<div class="form-item">
 						<label>设 置 密 码</label>
 						<span class="placeholder">6~16位，需组合字母、数字或符号</span>
-						<input type="password" name="regPwd" class="field">
+						<input type="password" name="regPwd" class="field" warning="长度只能在2-16个字符之间，请重新输入">
 					</div>
 					<div class="input-tip"></div>
 					
 					<div class="form-item">
 						<label>确 认 密 码</label>
 						<span class="placeholder">请再次输入密码</span>
-						<input type="password" name="regPwdRepeat" class="field">
+						<input type="password" name="regPwdRepeat" class="field" warning="长度只能在2-16个字符之间，请重新输入">
 					</div>
 					<div class="input-tip"></div>
 					
 					<div class="form-item">
 						<label>验　证　码</label>
 						<span class="placeholder">请输入验证码</span>
-						<input type="text" class="field">
+						<input type="text" class="field" warning="两次密码输入不一致">
 						<img class="img-code" src="img/picVerifyCode">
 					</div>
 					<div class="input-tip"></div>
 					
-					<div class="form-item">
+					<div class="form-item" id="b">
 						<label>手机验证码</label>
 						<span class="placeholder">请输入手机验证码</span>
 						<input type="text" name="mobileCode" class="field">
@@ -143,7 +145,7 @@
 				<div id="register-others">
 					<div class="ewma">
 						<h2>客户端</h2>
-						<img width="144" src="img/ewm.png">
+						<img src="img/ewm.png">
 						<span>下载客户端</span>
 						<span>畅听更多音乐</span>
 					</div>
@@ -199,11 +201,6 @@
 		</div>
 	</body>
 	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
-	<script type="text/javascript">
-		$(".placeholder").click(function() {
-			$(this).css("display", "none");
-			$(this).siblings("input").focus()
-		})
-	</script>
+	<script type="text/javascript" src="js/register.js"></script>
 
 </html>

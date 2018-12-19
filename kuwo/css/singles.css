@@ -115,6 +115,26 @@ body {
 #lrcContent p.noLrc {
 	margin-top:100px;
 }
+
+#bar_box {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 6px;
+    height: 100%;
+    border-radius: 5px;
+}
+
+#bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 6px;
+    height: 100px;
+    background: #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+}
 /*歌词结束*/
 
 /*播放器开始*/
@@ -124,6 +144,8 @@ body {
 	right:0;
 	top:0;
 }
+
+
 /*歌手头像*/
 .musiciPic {
 	margin:0 0 41px 35px;
