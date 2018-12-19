@@ -43,7 +43,7 @@ input {
 	font-family: 'Microsoft YaHei', 'Hiragino Sans GB';
 	color: #ccc;
 	display: inline;
-	cursor: text
+	cursor: text;
 }
 
 .form-item .field {
@@ -173,7 +173,7 @@ input {
 	height: 80px;
 	overflow: hidden;
 	margin: 13px 15px 0 0;
-	background: url(img/artisticon.png) no-repeat;
+	background: url(../img/artisticon.png) no-repeat;
 }
 
 #register-others .downList dl dd a {
