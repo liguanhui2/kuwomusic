@@ -375,6 +375,44 @@ fieldset, img {
 	position: relative;
 }
 
+/**底栏**/
+.page {
+	float: left;
+	height: 30px;
+	text-align: center;
+	padding: 25px 0 60px 0;
+}
+
+.page .current {
+	background: url(../img/current.jpg);
+}
+
+.page a {
+	float: left;
+	font-size: 12px;
+	color: #333;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	display: block;
+	margin-right: 5px;
+	background: url(../img/page.jpg);
+}
+
+.page a img {
+	margin-top: 10px;
+	display: inline;
+}
+
+.page .point {
+	float: left;
+	margin: 0 19px 0 14px;
+	height: 26px;
+	line-height: 26px;
+	color: #999;
+}
+
+
 
 
 /**评论**/
@@ -648,4 +686,60 @@ fieldset, img {
 	height: 26px;
 	line-height: 26px;
 	color: #999999;
+}
+
+/**分享**/
+#commentArea .commentShareBox a{
+	width: 18px;
+	height: 18px;
+	margin-left: 8px;
+	background: url(../img/icon.png) no-repeat;
+	float: left;
+}
+
+#commentArea .commentShareBox .commentSharecontent {
+	display: none;
+	padding-right: 10px;
+	overflow: hidden;
+	background: #fff;
+}
+
+#commentArea .commentShareBox .commentSharecontent .new_sina {
+	background-position: -219px -196px;
+}
+
+#commentArea .commentShareBox .commentSharecontent .new_qzone {
+	background-position: -242px -196px;
+}
+
+#commentArea .commentShareBox .commentSharecontent .new_tqq {
+	background-position: -265px -196px;
+}
+
+#commentArea .commentShareBox .commentSharecontent .new_douban {
+	background-position: -288px -196px;
+}
+
+#commentArea .commentShareBox .commentSharecontent .new_renren {
+	background-position: -311px -196px;
+}
+
+#commentArea .commentShareBox .new_sina:hover {
+	background-position: -219px -216px;
+}
+
+#commentArea .commentShareBox .new_qzone:hover {
+	background-position: -242px -216px;
+}
+
+#commentArea .commentShareBox .new_tqq:hover {
+	background-position: -265px -216px;
+}
+
+#commentArea .commentShareBox .new_douban:hover {
+	background-position: -288px -216px;
+}
+
+#commentArea .commentShareBox .new_renren:hover {
+	background-position: -311px -216px;
 }
